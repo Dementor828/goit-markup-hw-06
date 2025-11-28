@@ -13,7 +13,7 @@
     --white: #FFFFFF;
     --dairy: #FCFCFC;
     --main-ff: "Roboto";
-    --secondary-ff: "Roboto";
+    --secondary-ff: "Raleway";
 }
 
 a {
@@ -49,7 +49,7 @@ body {
 }
 
 .section {
-    padding: 120px 0;
+    padding: 96px 0;
 }
 
 /*endregion general*/
@@ -138,7 +138,7 @@ body {
 .addresses-item {
     color: #434455;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 150%;
     letter-spacing: 0.02em;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -164,7 +164,7 @@ body {
     background-size: cover;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 188px 0;
+    padding: 72px 0;
 }
 
 @media screen and (min-resolution: 192dpi) {
@@ -249,7 +249,7 @@ body {
 }
 
 .advantages-title {
-    font-weight: 500;
+    font-weight: 700;
     font-size: 36px;
     line-height: 120%;
     letter-spacing: 0.02em;
@@ -291,6 +291,7 @@ body {
     flex-wrap: wrap;
     gap: 72px;
     justify-content: center;
+    align-items: center;
 }
 
 .team-item {
@@ -299,6 +300,11 @@ body {
     max-width: 264px;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.team-item-img {
+    width: 100%;
+    height: auto;
 }
 
 .team-item-info {
@@ -382,7 +388,6 @@ body {
 
 .portfolio-item {
     width: 100%;
-    max-width: 288px;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -393,6 +398,11 @@ body {
 .portfolio-image-wrapper {
     position: relative;
     overflow: hidden;
+}
+
+.portfolio-image-wrapper > img {
+    max-width: 100%;
+    height: auto;
 }
 
 .portfolio-overlay {
@@ -445,7 +455,7 @@ body {
 
 .page-footer {
     background: #2E2F42;
-    padding: 100px 0;
+    padding: 96px 0;
 }
 
 .page-footer .container {
@@ -559,6 +569,7 @@ body {
 .footer-form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 24px;
 }
 
@@ -585,7 +596,8 @@ body {
 }
 
 .footer-submit-button {
-    min-width: 165px;
+    width: 165px;
+
     height: 40px;
     display: flex;
     justify-content: center;
@@ -634,7 +646,7 @@ body {
     border-radius: 4px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background: #fcfcfc;
-    max-width: 408px;
+    max-width: 288px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -971,16 +983,21 @@ body {
     letter-spacing: 0.02em;
 }
 
-.burger-contacts-item > a {
-    color: var(--slate);
-}
-
 .burger-contacts-item > a:hover, .burger-contacts-item > a:focus {
     color: var(--iris);
 }
 
 .burger-addresses-item {
 
+}
+
+.iris-text {
+    color: var(--iris);
+}
+
+.slate-text {
+    color: var(--slate);
+    font-style: normal;
 }
 /*endregion burger*/
 
@@ -1009,6 +1026,7 @@ body {
         margin-right: 120px;
         padding: 0;
     }
+
     /*endregion header*/
 
     /*region burger*/
@@ -1028,6 +1046,7 @@ body {
 
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/hero-t.jpg");
+        padding: 112px 0;
     }
 
     @media screen and (min-resolution: 192dpi) {
@@ -1040,10 +1059,11 @@ body {
     /* region advantages*/
     .advantages-list {
         flex-direction: row;
+        gap: 72px 24px;
     }
 
     .advantages-item {
-        width: calc((100% - 72px) / 2) ;
+        width: calc((100% - 24px) / 2) ;
     }
 
     .advantages-title {
@@ -1107,6 +1127,10 @@ body {
         display: block;
     }
     /*endregion footer*/
+
+    .modal {
+        max-width: 408px;
+    }
 }
 /*endregion tablet*/
 
@@ -1117,6 +1141,10 @@ body {
         max-width: 1158px;
         padding-left: 15px;
         padding-right: 15px;
+    }
+
+    .section {
+        padding: 120px 0;
     }
     /*endregion general*/
 
@@ -1131,6 +1159,10 @@ body {
     .logo-name {
         margin-right: 76px;
     }
+
+    .addresses-item {
+        font-size: 16px;
+    }
     /*endregion header*/
 
     /*region main*/
@@ -1138,6 +1170,7 @@ body {
     /*region hero*/
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/hero-d.jpg");
+        padding: 188px 0;
     }
 
     @media screen and (min-resolution: 192dpi) {
@@ -1154,6 +1187,7 @@ body {
 
     .advantages-title {
         font-size: 20px;
+        font-weight: 500;
     }
 
     .advantages-icon {
@@ -1188,6 +1222,10 @@ body {
     /*endregion main*/
 
     /*region footer*/
+    .page-footer {
+        padding: 100px 0;
+    }
+
     .page-footer .container {
         display: flex;
         flex-direction: row;
